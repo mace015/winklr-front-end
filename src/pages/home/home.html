@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Winklr
+		</ion-title>
+		<ion-buttons end>
+			<button ion-button (click)="logout()" item-right>Uitloggen</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	
+	<ion-list>
+		<button ion-item *ngFor="let group of groups" (click)="openGroup(group)">
+			{{ group.name }}
+		</button>
+	</ion-list>
+
+</ion-content>
